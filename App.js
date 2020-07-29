@@ -13,7 +13,7 @@ import * as React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import HomeStack from './navigation/HomeStack';
+import HomeStack from './src/navigation/HomeStack'
 
 const App: () => React$Node = () => {
 

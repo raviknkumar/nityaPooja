@@ -14,7 +14,7 @@ import {
 import Icon from 'react-native-vector-icons/FontAwesome';
 
 
-import {nityaPoojaSlokas} from '../resources/StringConstants';
+import {nityaPoojaSlokas} from '../../resources/StringConstants';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import Animated from "react-native-reanimated";
 import Sloka from '../components/Sloka';

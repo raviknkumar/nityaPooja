@@ -2,8 +2,8 @@
 
 import React from 'react';
 import {StyleSheet, View, Text, TouchableOpacity, Alert, Dimensions, StatusBar} from 'react-native';
-import {primary_background} from '../resources/Constants';
-import {nityaPooja} from '../resources/StringConstants';
+import {primary_background} from '../../resources/Constants';
+import {nityaPooja} from '../../resources/StringConstants';
 
 const width = Dimensions.get('screen').width;
 

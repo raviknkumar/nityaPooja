@@ -1,0 +1,10 @@
+{
+  "login": {
+    "welcome": "T Hllow",
+    "login_button": "T Login",
+    "singup_button": "T SignUp"
+  },
+  "signUp": {
+    "message": "Telugu lo kastam"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "login": {
+    "welcome": "Hllow",
+    "login_button": "Login",
+    "singup_button": "SignUp"
+  },
+  "signUp": {
+    "message": "Please SignUp to our app"
+  }
+}
