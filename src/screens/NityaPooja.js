@@ -19,6 +19,7 @@ import {SafeAreaView} from 'react-native-safe-area-context';
 import Animated from "react-native-reanimated";
 import Sloka from '../components/Sloka';
 
+
 const screenHeight = Dimensions.get("screen").height;
 
 const AnimatedFlatList = Animated.createAnimatedComponent(FlatList);
@@ -98,13 +99,7 @@ const NityaPooja = (props) => {
 
             <View style={{paddingHorizontal: 10}}>
 
-
                 <View style={{paddingTop: 10}}>
-
-                    <FlatList
-                        ref={ref=>flatListRef=ref}
-                        data={[]}
-                    />
 
                     <AnimatedFlatList
                         scrollEventThrottle={16}
@@ -118,9 +113,10 @@ const NityaPooja = (props) => {
                         contentContainerStyle={{ paddingBottom: 100}}
                               data={data}
                               keyExtractor={item => item.key.toString()}
-                              renderItem={({item}) => (
+                              renderItem={({item, index}) => (
                                     <Sloka
                                         item={item}
+                                        index={index}
                                         selectItem={selectItem}
                                         fontSize={fontSize}
                                         headerFontSize={headerFontSize}/>
@@ -152,17 +148,3 @@ const styles = StyleSheet.create({
 });
 
 export default NityaPooja;
-
-        /*
-                                  <TouchableOpacity onPress={()=>{selectItem(item)}}>
-                                  <Text style={{
-                                  fontSize: headerFontSize,
-                                  ...styles.headerStyle,
-                                  }}>
-                                  {item.header}
-                                  </Text>
-                                  <Text style={{fontSize: fontSize,}}>
-                                  {item.sloka}
-                                  </Text>
-                                  </TouchableOpacity>
-                                  )}/> */

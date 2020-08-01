@@ -10,17 +10,19 @@
 
 import * as React from 'react';
 
-import { View, Text, StyleSheet } from 'react-native';
-import { NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
-import HomeStack from './src/navigation/HomeStack'
+import {StyleSheet} from 'react-native';
+import {NavigationContainer} from '@react-navigation/native';
+import Main from './src/Main';
+import LanguageContextProvider from './src/context/LanguageContext';
 
 const App: () => React$Node = () => {
 
     return (
     <>
       <NavigationContainer>
-        <HomeStack/>
+          <LanguageContextProvider>
+            <Main/>
+          </LanguageContextProvider>
       </NavigationContainer>
     </>
   );

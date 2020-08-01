@@ -21,9 +21,8 @@ class LoginScreen extends Component {
     async loadResources() {
         console.log("Loading Resources");
         let lang = await AsyncStorage.getItem('lang');
-        lang = 'te';
         if (lang) {
-            console.log("Setting Local Language");
+            console.log("Setting Local Language as ", lang);
             setLanguage(lang);
         }
         this.setState({loading: false})
@@ -41,9 +40,9 @@ class LoginScreen extends Component {
         } else {
             return (
                 <View>
-                    <Text>{strings('login.welcome', {name: this.state.username})}</Text>
-                    <Button title={strings('login.login_button')}></Button>
-                    <Button title={strings('login.singup_button')} onPress={()=> {this.props.navigation.navigate('signUp')}}></Button>
+                    {/*<Text>{strings('login.welcome', {name: this.state.username})}</Text>*/}
+                    <Button title='Login'></Button>
+                    <Button title={"Home"} onPress={()=> {this.props.navigation.navigate('Home')}}></Button>
                 </View>
             );
         }

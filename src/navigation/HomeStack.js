@@ -1,13 +1,11 @@
 /* eslint-disable */
 
 import React from 'react';
-
-import { NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
+import {createStackNavigator} from '@react-navigation/stack';
 import Home from '../screens/Home';
 import NityaPooja from '../screens/NityaPooja';
-import LoginScreen from '../screens/LoginScreen';
-import SignUp from '../screens/SignUp';
+import Settings from '../screens/Settings';
+import Layout from '../screens/Layout';
 
 const Stack = createStackNavigator();
 
@@ -25,16 +23,7 @@ function HomeStack() {
                 },
             }}
         >
-            <Stack.Screen
-                name="Login"
-                component={LoginScreen}
-                options={{ title: 'Login' }}
-            />
-            <Stack.Screen
-                name="signUp"
-                component={SignUp}
-                options={{ title: 'signUp' }}
-            />
+
             <Stack.Screen
                 name="Home"
                 component={Home}
@@ -44,6 +33,11 @@ function HomeStack() {
                 name="NityaPooja"
                 component={NityaPooja}
                 options={{ title: 'Nitya Pooja', headerShown: false }}
+            />
+            <Stack.Screen
+                name="Settings"
+                component={Settings}
+                options={{ headerShown: false}}
             />
         </Stack.Navigator>
     );

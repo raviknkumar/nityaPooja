@@ -1,11 +1,13 @@
 import ReactNative from 'react-native';
 import I18n from 'react-native-i18n';
-import RNRestart from 'react-native-restart'; // Import package from node modules
-
 
 // Import all locales
 import en from '../locales/en';
-import te from '../locales/te'
+import te from '../locales/te';
+import kn from '../locales/kn';
+import hi from '../locales/hi';
+import { Platform, NativeModules } from 'react-native'
+
 
 // Should the app fallback to English if user locale doesn't exists
 I18n.fallbacks = true;
@@ -13,7 +15,9 @@ I18n.fallbacks = true;
 // Define the supported translations
 I18n.translations = {
     en,
-    te
+    te,
+    kn,
+    hi
 };
 
 const currentLocale = I18n.currentLocale();
@@ -28,6 +32,15 @@ ReactNative.I18nManager.allowRTL(isRTL);
 export function strings(name, params = {}) {
     return I18n.t(name, params);
 };
+
+export function getDeviceLang() {
+
+    const deviceLanguage = Platform.OS === 'ios' ?
+            NativeModules.SettingsManager.settings.AppleLocale || NativeModules.SettingsManager.settings.AppleLanguages[0] //iOS 13
+            : NativeModules.I18nManager.localeIdentifier;
+
+    return deviceLanguage;
+}
 
 export function setLanguage(lang) {
     console.log("Update Language to ", lang);
