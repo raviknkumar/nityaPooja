@@ -1,5 +1,5 @@
 import React, {createContext, useState} from "react";
-import {AsyncStorage} from 'react-native';
+import AsyncStorage from '@react-native-community/async-storage';
 import {getDeviceLang, setLanguage} from '../../locales/i18n';
 
 export const LanguageContext = createContext();
