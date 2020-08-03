@@ -35,7 +35,7 @@ const Settings = (props) => {
                     />
                     <View style={{marginLeft:15}}>
                         <Text style={{color: 'white', fontSize:20, fontWeight: '700'}}>
-                            Settings
+                            {strings('settings')}
                         </Text>
                         <Text style={{color: 'white', fontSize:14, fontWeight: '400', marginTop:5}}>
                             Change account settings and personalize your app as your wish!

@@ -3,6 +3,7 @@ import {StyleSheet, Text, SafeAreaView} from 'react-native';
 import HomeStack from './navigation/HomeStack';
 import {LanguageContext} from './context/LanguageContext';
 import I18n from '../locales/i18n';
+import Loading from './components/Loading';
 
 const Main = (props) => {
 
@@ -25,7 +26,7 @@ const Main = (props) => {
     }, []);
 
     if(loading){
-        return <Text>Loading</Text>
+        return <Loading/>
     }
     else {
         return (
